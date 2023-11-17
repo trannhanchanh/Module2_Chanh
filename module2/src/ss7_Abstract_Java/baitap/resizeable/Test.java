@@ -12,6 +12,10 @@ public class Test {
         System.out.println(circle);
         System.out.println("This area of circle:" + circle.getArea());
         System.out.println("This perimeter of circle:" + circle.getPerimeter());
+        circle =new Circle("yellow", true, 5.0);
+        System.out.println(circle);
+        System.out.println("This area of circle:" + circle.getArea());
+        System.out.println("This perimeter of circle:" + circle.getPerimeter());
         circle.resize(50.0);
         System.out.println(circle);
         System.out.println("This area of circle:"+ circle.getArea());
@@ -23,6 +27,10 @@ public class Test {
         System.out.println(rectangle);
         System.out.println("This area of rectangle:" + rectangle.getArea());
         System.out.println("This perimeter of rectangle:" + rectangle.getPerimeter());
+        rectangle = new Rectangle("orange", false, 5.0, 7.0);
+        System.out.println(rectangle);
+        System.out.println("This area of rectangle:" + rectangle.getArea());
+        System.out.println("This perimeter of rectangle:" + rectangle.getPerimeter());
         rectangle.resize(50.0);
         System.out.println(rectangle);
         System.out.println("This area of rectangle:" + rectangle.getArea());
@@ -31,6 +39,10 @@ public class Test {
         Square square = new Square();
         System.out.println(square);
         square = new Square(4.0);
+        System.out.println(square);
+        System.out.println("This area of square:" + square.getArea());
+        System.out.println("This perimeter of square:" + square.getPerimeter());
+        square = new Square("black", true, 4.0);
         System.out.println(square);
         System.out.println("This area of square:" + square.getArea());
         System.out.println("This perimeter of square:" + square.getPerimeter());

@@ -2,7 +2,7 @@ package ss7_Abstract_Java.baitap.resizeable.circle;
 
 import ss7_Abstract_Java.baitap.resizeable.inter.Réizeable;
 
-public class Rectangle implements Réizeable {
+public class Rectangle extends Shape implements Réizeable {
     private double width = 1.0;
     private double height = 1.0;
 
@@ -10,6 +10,12 @@ public class Rectangle implements Réizeable {
     }
 
     public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public Rectangle(String color, boolean filled, double width, double height) {
+        super(color, filled);
         this.width = width;
         this.height = height;
     }
@@ -29,6 +35,7 @@ public class Rectangle implements Réizeable {
     public void setHeight(double height) {
         this.height = height;
     }
+
     public double getArea() {
         return this.width * this.height;
     }
@@ -40,8 +47,8 @@ public class Rectangle implements Réizeable {
     public String toString() {
         return "Rectangle{" +
                 "width=" + width +
-                ", height=" + height +
-                '}';
+                ", height=" + height + " , which is a subclass of" +
+                super.toString();
     }
 
     @Override

@@ -1,8 +1,8 @@
-package ss7_Abstract_Java.baitap.resizeable.circle;
+package ss7_Abstract_Java.baitap.colorable.square;
 
-import ss7_Abstract_Java.baitap.resizeable.inter.Réizeable;
+import ss7_Abstract_Java.baitap.colorable.inter.Colorable;
 
-public class Square extends Shape implements Réizeable {
+public class Square extends Shape implements Colorable {
     private double size = 1.0;
 
     public Square() {
@@ -24,12 +24,8 @@ public class Square extends Shape implements Réizeable {
     public void setSize(double size) {
         this.size = size;
     }
-
-    public  double getArea() {
+    public double getArea() {
         return Math.pow(this.size, 2);
-    }
-    public  double getPerimeter() {
-        return 4 * this.size;
     }
 
     @Override
@@ -40,8 +36,8 @@ public class Square extends Shape implements Réizeable {
     }
 
     @Override
-    public void resize(double percent) {
-        this.setSize(this.getSize() * (1 + percent/100));
+    public void howToColor() {
+        System.out.println("Color all four sides.");
 
     }
 }
